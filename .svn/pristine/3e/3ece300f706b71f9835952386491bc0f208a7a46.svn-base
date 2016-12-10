@@ -1,0 +1,29 @@
+Bugs Found:
+	- Colliding with own bullets produces error [FIXED]
+	- While starting over after death or quitting to main menu health start out at previous health [FIXED]
+		- once hit proper health seems to be displayed
+		- had health go into the negatives after being hit when starting with 0/100(haven't been able to replicate)
+		            [PART OF THE ABOVE ISSUE, FIXED]
+        - Scoreboard puts score in database multiple times when player finishes game
+    - Proceeded to level two and no enemy appeared, but the level ended once the length was reached
+    - Died on last level while rapidly moving the mouse left and right while holding down shoot and the game crash [FIXED]
+      Said the problem was the text was length zero. Haven't been able to replicate and don't understand what happened
+        ^^^I think what happened here was that while you were firing you hit quit. Patched that, player bullets are removed
+           on pause and unpause now.
+    - After playing the game through successfully once, there seems to be a bug with the levels following level 1 not being properly
+      deconstructed, so the player finishes the game right after level 1 is complete and then the game crashes. [FIXED]
+    - When pausing the game, the background doesn't continue where it left off with the tutorial background
+    -Return to main menu button was not functioning after dying
+
+
+
+Bugs Fixed / Attempted to Fix:
+Other Notes:
+	- Using a combination of the left and right mouse buttons and the space bar
+	  allows for extremely fast shooting. [FIXED]
+	- Health is not reset after each round. I don't know if this is intentional [Fixed]
+
+
+Ideas:
+        - Game ends once the length has been reached. I feel it would be better to end if the end has been reached and/or all
+	  enemies are dead or off the screen. After some thinking this might not be needed if levels are set to appropriate length

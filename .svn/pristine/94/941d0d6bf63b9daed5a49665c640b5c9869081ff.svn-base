@@ -1,0 +1,60 @@
+import pygame
+
+import helpers
+import threading
+import time
+
+availablePowerups = ["shield", "increaseHealth", "increaseShotDamage"]
+
+class Powerup(pygame.sprite.Sprite):
+
+    def __init__(self, powerupImage, powerupType, spawnLocation):
+        pygame.sprite.Sprite.__init__(self)
+        self.image, self.rect = helpers.load_image(powerupImage, -1)
+        # Speed to move in pixels per update
+        self.parentEntity = None
+        self.powerupType = powerupType
+        self.spawnLocation = spawnLocation
+        self.currentLoc = spawnLocation
+
+    def create(self):
+        self.rect.midtop = self.spawnLocation
+
+    def update(self):
+        self.currentLoc = (self.rect.midtop[0], self.currentLoc[1] + 0.4)
+        self.rect.midtop = (self.currentLoc[0], int(self.currentLoc[1]))
+
+    def enableShield(self, player, powerupAmount):
+        player.powerup = True
+        player.damageFactor = powerupAmount
+        image, rect = helpers.load_image('playerShielded.png', -1)
+        player.image = image
+        time.sleep(10)
+        image, rect = helpers.load_image('player.png', -1)
+        player.image = image
+        player.powerup = False
+
+    def enableBulletBuff(self, enemies, powerupAmount):
+        for enemy in enemies:
+            enemy.damageFactor += powerupAmount
+        time.sleep(5)
+        for enemy in enemies:
+            enemy.damageFactor -= powerupAmount
+
+    def doPowerup(self, player, enemies):
+        amount = 0
+        if "shield" in self.powerupType:
+            powerupAmount = self.powerupType.replace("shield", "")
+            if powerupAmount is not '':
+                t = threading.Thread(target=self.enableShield, args=(player, int(powerupAmount)))
+                t.start()
+        elif "increaseHealth" in self.powerupType:
+            powerupAmount = self.powerupType.replace("increaseHealth", "")
+            if powerupAmount is not '':
+                player.health += int(powerupAmount)
+        #TODO: FINISH IMPLEMENTING THIS PART
+        elif "increaseShotDamage" in self.powerupType:
+            powerupAmount = self.powerupType.replace("increaseShotDamage", "")
+            if powerupAmount is not '':
+                t = threading.Thread(target=self.enableBulletBuff, args=(enemies, int(powerupAmount)))
+                t.start()

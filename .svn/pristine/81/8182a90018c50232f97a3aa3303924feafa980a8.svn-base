@@ -1,0 +1,29 @@
+Tasks to do:
+
+- Level advancement system    Assignee: (Noah) [DONE]
+-- Allow for multiple levels in the engine (currently it only allows for one level)
+-- Increment player score by X amount as the player moves through the level
+-- Fake a camera "pan" by transforming the backround image as the level advances
+-- Pull level length from JSON file for dynamic level configuration
+
+- Enhancements to HUD - show level countdown timer, make it look prettier    Assignee: (?)
+-- Probably some sort of overall UI theme
+-- Show the countdown until the level is done (will be contained in level data)
+
+- Power-ups    Assignee: (?)
+-- Player shield (basically an enemy damage multiplier to reduce the amount of damage they deal)
+-- Power hitter (player damage multiplier to increase damage)
+-- Bullet size increase
+-- Possibly more?
+
+- Boss battles    Assignee: (Noah) [DONE]
+-- System for designating boss levels in the JSON level files
+-- I honestly think it will probably be loaded in like any other level and then we can just make the enemies really overpowered.
+
+- Main Menu     Assignee: (?) [DONE]
+-- Show a leaderboard (this will also require the user score to be persisted when the game ends)
+-- Start the game
+-- Nice game title and some pretty graphics
+
+- Add sound to levels
+-- Configure dynamically via the level manager

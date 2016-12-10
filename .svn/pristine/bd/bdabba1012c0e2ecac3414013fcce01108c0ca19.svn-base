@@ -1,0 +1,88 @@
+from entity import EnemyEntity, PowerupEntity
+from level import Background
+
+import os, json, random
+
+levels = []
+currentLevel = None
+currentLevelNumber = 0
+hasNextLevel = False
+
+class Level():
+    def __init__(self, levelLength, levelNumber):
+        self.levelNumber = levelNumber
+        self.enemies = []
+        self.powerups = []
+        self.backgroundLocation = ''
+        self.levelLength = levelLength
+
+    def createLevel(self, enemySpriteGroup, powerupSprites):
+        for enemy in self.enemies:
+            enemy.create(480)
+            enemySpriteGroup.add(enemy)
+        for powerup in self.powerups:
+            powerup.create()
+            powerupSprites.add(powerup)
+
+    def renderHealth(self, screen):
+        for enemy in self.enemies:
+            enemy.display_health(screen)
+
+    # Method to handle the 'camera pan' in the level
+    def incrementLevel(self, levelHeight, player, hud):
+        self.levelLength -= 0.01 # Progress through the levels at 10 pixels per frame
+        if 0.1 > self.levelLength % 10 > 0 and player:
+            player.score += 1
+            hud.updateScore(player)
+        return ((levelHeight + self.levelLength) * -1) + 720
+
+def loadLevel():
+    global currentLevel
+    global currentLevelNumber
+    global hasNextLevel
+
+    for file in os.listdir("data/levels"):
+        if file.endswith(".json"):
+            with open("data/levels/" + file) as data_file:
+                data = json.load(data_file)
+                level = Level(data['length'], data['levelNumber'])
+                for enemy in data['enemies']:
+                    level.enemies.append(EnemyEntity.BaseEnemy((enemy['spawnPosition'][0], enemy['spawnPosition'][1]),
+                                                               enemy['fireRate'], enemy['health'], enemy['bullets'],
+                                                               enemy['moveSpeed'], enemy['value'], enemy['image']))
+
+                for i in range(0, random.randint(1, 5)):
+                    powerupType = random.choice(PowerupEntity.availablePowerups) + str(random.randint(10, 30))
+                    powerupImage = ''
+                    if "shield" in powerupType:
+                        powerupImage = "shieldPowerup.png"
+                    elif "increaseHealth" in powerupType:
+                        powerupImage = "health.png"
+                    elif "increaseShotDamage" in powerupType:
+                        powerupImage = "bulletPowerup.png"
+
+                    level.powerups.append(PowerupEntity.Powerup(powerupImage, powerupType,
+                                                               (random.randint(0, 720), random.randint(-1200, 0))))
+                level.backgroundLocation = data['background']
+                levels.append(level)
+                if data['levelNumber'] is 1 and currentLevel is None:
+                    currentLevelNumber = 1
+                    currentLevel = level
+                elif data['levelNumber'] == 2:
+                    hasNextLevel = True
+
+def getCurrentLevel():
+    return currentLevel
+
+def nextLevel():
+    global currentLevel
+    global hasNextLevel
+
+    for level in levels:
+        if int(level.levelNumber) == currentLevel.levelNumber + 1:
+            currentLevel = level
+            background = Background.Background(currentLevel.backgroundLocation, [0, 0],
+                                               int(getCurrentLevel().levelLength))
+            if len(levels) == currentLevel.levelNumber:
+                hasNextLevel = False
+            return background

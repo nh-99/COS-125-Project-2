@@ -1,0 +1,590 @@
+{
+  "levelNumber" : 8,
+  "length" : 400,
+  "background" : "data/images/testbg.png",
+  "enemies" : [
+    {
+      "spawnPosition" : [250, -10],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [250, -110],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [250, -210],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [250, -310],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [250, -410],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    }, 
+    
+    {
+      "spawnPosition" : [1030, -350],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [1030, -450],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [1030, -550],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [1030, -650],
+      "fireRate" : 500,
+      "health" : 65,
+      "moveSpeed" : 0.12,
+      "value" : 10,
+      "image": "enemy2.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [440, -440],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [840, -440],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [540, -750],
+      "fireRate" : 1200,
+      "health" : 40,
+      "moveSpeed" : 0.15,
+      "value" : 15,
+      "image": "enemy1.png",
+      "bullets" : [
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [640, -750],
+      "fireRate" : 600,
+      "health" : 40,
+      "moveSpeed" : 0.15,
+      "value" : 15,
+      "image": "enemy1.png",
+      "bullets" : [
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [740, -750],
+      "fireRate" : 600,
+      "health" : 40,
+      "moveSpeed" : 0.15,
+      "value" : 15,
+      "image": "enemy1.png",
+      "bullets" : [
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [400, -800],
+      "fireRate" : 600,
+      "health" : 40,
+      "moveSpeed" : 0.15,
+      "value" : 15,
+      "image": "enemy1.png",
+      "bullets" : [
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [880, -800],
+      "fireRate" : 600,
+      "health" : 40,
+      "moveSpeed" : 0.15,
+      "value" : 15,
+      "image": "enemy1.png",
+      "bullets" : [
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [640, -300],
+      "fireRate" : 275,
+      "health" : 1000,
+      "moveSpeed" : 0.025,
+      "value" : 1000,
+      "image": "boss1.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : -1.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -1.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -1
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.75
+        },
+        {
+          "damage" : 10,
+          "positionMultiplier" : -0.5
+        },
+        {
+          "damage" : 10,
+          "positionMultiplier" : -0.25
+        },
+        {
+          "damage" : 15,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 10,
+          "positionMultiplier" : 0.75
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 1
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 1.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 1.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [400, -900],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [400, -1100],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [400, -1300],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [800, -1300],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [800, -1500],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [800, -1700],
+      "fireRate" : 700,
+      "health" : 80,
+      "moveSpeed" : 0.11,
+      "value" : 20,
+      "image": "enemy3.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [240, -1350],
+      "fireRate" : 900,
+      "health" : 100,
+      "moveSpeed" : 0.1,
+      "value" : 10,
+      "image": "enemy4.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [440, -1500],
+      "fireRate" : 900,
+      "health" : 100,
+      "moveSpeed" : 0.1,
+      "value" : 10,
+      "image": "enemy4.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [840, -1500],
+      "fireRate" : 900,
+      "health" : 100,
+      "moveSpeed" : 0.1,
+      "value" : 10,
+      "image": "enemy4.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    },
+    {
+      "spawnPosition" : [1040, -1350],
+      "fireRate" : 900,
+      "health" : 100,
+      "moveSpeed" : 0.1,
+      "value" : 10,
+      "image": "enemy4.png",
+      "bullets" : [
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.5
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : 0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.25
+        },
+        {
+          "damage" : 5,
+          "positionMultiplier" : -0.5
+        }
+      ]
+    }     
+  ],
+  "powerups" : [
+    {
+      "image" : "bullet.png",
+      "spawnPosition" : [250, 200],
+      "type" : "increaseHealth10",
+      "duration" : 10
+    }
+  ]
+}
